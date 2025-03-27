@@ -8,10 +8,10 @@
                             <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="1.5" d="M4 5h12M4 12h16M4 19h8" color="#000" />
                         </svg></li>
-                    
+                        <router-link to="/">
                         <li @click="scrollToSection('home')" class="menu-item active ">
-                           <router-link to="/">Home</router-link> 
-                        </li>
+                           Home
+                        </li></router-link> 
                   
                     
                         <li @click="scrollToSection('collection')" class="menu-item">Collections</li>

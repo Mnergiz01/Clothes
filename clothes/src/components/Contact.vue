@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center justify-center min-h-screen">
-        <div class="w-96 p-6 bg-white rounded-lg shadow-md">
+        <div class="w-96 p-6 bg-white rounded-lg shadow-md" data-aos="fade-up">
             <h1 class="text-2xl font-semibold text-center mb-4">
                 {{ isRegistering ? "Kayıt Ol" : "Giriş Yap" }}
             </h1>
@@ -52,7 +52,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Kullanıcı bilgileri için değişkenler
 const email = ref("");
@@ -98,6 +100,15 @@ const login = () => {
 const toggleAuthMode = () => {
     isRegistering.value = !isRegistering.value;
 };
+
+// AOS'u başlat
+onMounted(() => {
+    AOS.init({
+        duration: 800, // Animasyon süresi (ms)
+        once: true, // Animasyonun sadece bir kere çalışmasını sağlar
+        easing: "ease-in-out",
+    });
+});
 </script>
 
 <style scoped>
