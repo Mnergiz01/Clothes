@@ -4,6 +4,7 @@ import Addcart from '../views/Addcart.vue'
 import Products from '../views/Products.vue'
 import Mycart from '../views/Mycart.vue'
 import Likeproduct from '../views/Likeproduct.vue'
+import Contact from '@/components/Contact.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/likeproduct',
       name: 'Likeproduct',
       component: Likeproduct,
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact,
     },
     
     
